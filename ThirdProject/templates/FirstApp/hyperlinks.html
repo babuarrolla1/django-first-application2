@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}   <!-- folder name-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HyperLinks DJango-App</title>
+        <style>
+            body{
+                background-color: lightyellow;
+            }
+            #h11{
+                background-color: yellow;
+                text-align: center;
+                color:blue;
+                border:2px Solid Brown;
+            }
+            #h44{
+                background-color: lightpink;
+                text-align: center;
+                color:red;
+                width:75%;
+                margin:auto;
+                border:1px Solid Red;
+            }
+            #div1{
+                background: aliceblue;
+                border:5px solid red;
+                height:200px;
+            }
+            #div2{
+                background: lightcyan;
+                height: 99%;
+            }
+            .indiv{
+                float:left;
+                width: 24.5%;
+                height:180px;
+                margin:1px;
+
+            }
+            img{
+                border: lightgray;
+                height:170px;
+                width: 90%;
+                margin:3px;
+                margin-left:8px;
+            }
+            img:hover{
+                border:4px solid blue;
+                width:95%;
+                height: 175px;
+            }
+            .btn {
+              background-color: DodgerBlue;
+              border: none;
+              color: white;
+              padding: 12px 30px;
+              cursor: pointer;
+              font-size: 18px;
+            }
+            
+            /* Darker background on mouse-over */
+            .btn:hover {
+                background-color: RoyalBlue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id=h11>{{msg1}}</h1>
+        <h4 id=h44>Current Server Date & Time :: {{date1}}</h4>
+        <hr />
+        <div id="div1">
+            <div id="div2">
+                <div class="indiv">
+                    <a href="{% static 'image1.jpg' %}" target="_self">
+                      <img src="{% static 'image1.jpg' %}"  alt="missing-image" ></a>
+            </div>
+                <div class="indiv">
+                    <a href="{% static 'image2.jpg' %}" target="_self">
+                      <img src="{% static 'image2.jpg' %}"  alt="missing-image" ></a>
+            </div>
+                <div class="indiv">
+                    <a href="{% static 'image3.jpg' %}" target="_self">
+                      <img src="{% static 'image3.jpg' %}"  alt="missing-image" ></a>
+            </div>
+                <div class="indiv">
+                    <a href="{% static 'image4.jpg' %}" target="_self">
+                      <img src="{% static 'image4.jpg' %}"  alt="missing-image" ></a>
+                </div>
+            </div>
+        </div>
+    <p>CLICK HERE TO DOWNLOAD</p>
+    <ol>
+        <li><a href="{% static "other/VSCodeUserSetup-x64-1.93.1.exe" %}"><button class="btn"> Download</button></a></li>
+    </ol>
+    <hr />
+        <h2>DEVARA TEASER AUDIO</h2>
+    <hr /><audio controls>
+        <source src="{% static 'other/All Hail The Tiger.mp3' %}" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <hr />
+        <h3>DEVARA RELEASE TRAILER</h3>
+    <hr/>    
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/HNYA6bqL6bU?si=yyZNHjhsydkcwJeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+{% load static %}   <!-- folder name-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Static Files in DJango App</title>
+    <style>
+        #h11{
+            color:blue;
+        }
+        #h22{
+            color:green;
+        }
+        #img{
+            width:400px;
+            height:280px;
+            border:10px Groove lightgray;
+        }
+		body{
+            background-image: url("{% static 'images/bgimage.jpg' %}");
+        }
+    </style>
+</head>
+<body>
+    <h1 id=h11>{{msg1}}</h1>
+    <hr />
+    <h2 id=h22>Current Server Date & Time :: {{date1}}</h2>
+    <hr />
+    <h3>At this time your image is:</h3>
+    <img src="{%static "/"%}{{img}}" alt="Time-Line-Image" id="img" />
+</body>
+</html>
